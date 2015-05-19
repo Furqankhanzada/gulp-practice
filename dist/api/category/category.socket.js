@@ -1,0 +1,1 @@
+"use strict";function onSave(e,o,t){e.emit("category:save",o)}function onRemove(e,o,t){e.emit("category:remove",o)}var Category=require("./category.model");exports.register=function(e){Category.schema.post("save",function(o){onSave(e,o)}),Category.schema.post("remove",function(o){onRemove(e,o)})};

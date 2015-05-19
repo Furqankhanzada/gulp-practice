@@ -1,0 +1,1 @@
+"use strict";var mongoose=require("mongoose"),Schema=mongoose.Schema,CategorySchema=new Schema({name:String,term_group:{type:Schema.ObjectId}});module.exports=mongoose.model("Category",CategorySchema);

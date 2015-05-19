@@ -1,0 +1,1 @@
+"use strict";function onSave(e,o,m){e.emit("comment:save",o)}function onRemove(e,o,m){e.emit("comment:remove",o)}var Comment=require("./comment.model");exports.register=function(e){Comment.schema.post("save",function(o){onSave(e,o)}),Comment.schema.post("remove",function(o){onRemove(e,o)})};

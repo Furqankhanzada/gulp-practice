@@ -1,0 +1,1 @@
+"use strict";var should=require("should"),app=require("../../app"),request=require("supertest");describe("GET /api/categories",function(){it("should respond with JSON array",function(e){request(app).get("/api/categories").expect(200).expect("Content-Type",/json/).end(function(r,t){return r?e(r):(t.body.should.be["instanceof"](Array),void e())})})});
